@@ -175,6 +175,7 @@ async def aim(update, context):
 
 async def meal(update, context):
     meal_info = update.message.text
+    logger.info('%s сделал запрос %s', update.message.from_user.first_name, meal_info)
     user = context.user_data
     resp_text, resp_number = meal_calories(meal_info)
     logger.info('%s сделал запрос %s и получил ответ %s (%s)',
