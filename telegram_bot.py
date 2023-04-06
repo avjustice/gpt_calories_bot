@@ -1,4 +1,5 @@
-from config import TG_TOKEN
+# from config import TG_TOKEN
+import os
 import logging
 from datetime import date
 from gpt_calories import meal_calories
@@ -11,6 +12,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+TG_TOKEN = os.getenv('TG_TOKEN')
 START, SEX, WEIGHT, HEIGHT, AGE, LIFESTYLE, BASIC_METABOLISM, AIM, MEAL, CHANGE_WEIGHT, WEIGHT_HANDLER = range(11)
 BMR_AMR = {
     'Низкая': 1.2,
