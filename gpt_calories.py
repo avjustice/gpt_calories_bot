@@ -16,7 +16,7 @@ def meal_calories(request):
     response_text = completion.choices[0].message.content
     response = re.split("[ \-]+", response_text)
     if len(response) > 15:
-        return False
+        return response_text, False
     numbers = []
     for word in response:
         if word.isdigit():
