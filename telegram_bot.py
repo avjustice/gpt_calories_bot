@@ -1,4 +1,3 @@
-# from config import TG_TOKEN
 import os
 import logging
 from datetime import date
